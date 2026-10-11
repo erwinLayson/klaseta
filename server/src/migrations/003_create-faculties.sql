@@ -6,7 +6,7 @@ CREATE TABLE faculties(
     last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     role ENUM("teacher", "cashier", "register") NOT NULL DEFAULT "teacher",
-    status ENUM("active", "inactive"),
+    status ENUM("active", "inactive") NOT NULL DEFAULT "active",
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
 
