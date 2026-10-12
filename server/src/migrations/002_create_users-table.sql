@@ -2,6 +2,7 @@
 CREATE TABLE users (
     id BINARY(16) PRIMARY KEY NOT NULL,
     school_id BIGINT NOT NULL,
+    student_id BIGINT NULL, -- For student role to allow them to login using there student id
     username VARCHAR(255) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
@@ -15,4 +16,6 @@ CREATE TABLE users (
         REFERENCES schools(id)
         ON UPDATE CASCADE
         ON DELETE CASCADE,
+
+    UNIQUE(school_id, student_id)
 );
