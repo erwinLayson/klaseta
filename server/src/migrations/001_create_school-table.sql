@@ -1,6 +1,5 @@
 CREATE TABLE schools(
-    id BINARY(16) NOT NULL PRIMARY KEY,
-    school_id BIGINT NOT NULL UNIQUE,
+    school_id BIGINT PRIMARY KEY NOT NULL,
     name VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
     division VARCHAR(255) NOT NULL,

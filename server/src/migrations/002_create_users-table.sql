@@ -11,9 +11,9 @@ CREATE TABLE users (
     updated_at TIMESTAMP NULL DEFAULT NULL
         ON UPDATE CURRENT_TIMESTAMP,
 
-    CONSTRAINT user_fk_school_id
+    CONSTRAINT fk_school_id_in_users_tbl
         FOREIGN KEY (school_id)
-        REFERENCES schools(id)
+        REFERENCES schools(school_id)
         ON UPDATE CASCADE
         ON DELETE CASCADE,
 

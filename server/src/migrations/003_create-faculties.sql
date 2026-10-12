@@ -10,6 +10,6 @@ CREATE TABLE faculties(
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
 
-    CONSTRAINT fk_school_id FOREIGN KEY (school_id) REFERENCES schools(school_id)
+    CONSTRAINT fk_school_id_in_faculties_tbl FOREIGN KEY (school_id) REFERENCES schools(school_id)
     ON UPDATE CASCADE ON DELETE CASCADE
 )
